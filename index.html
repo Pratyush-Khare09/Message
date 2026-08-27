@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Megha (Chhoti Bauaa)</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* ─── LUXURY VINTAGE THEME TOKENS ─── */
+        :root {
+            --bg: #0A0910;
+            --bg-warm: #140D09;
+            --paper-base: #17131F;
+            --paper-border: rgba(212, 175, 55, 0.28);
+            --gold: #E5C158;
+            --gold-deep: #C29B38;
+            --gold-glow: rgba(229, 193, 88, 0.25);
+            --text: #EDE6DA;
+            --text-muted: #9F9AA8;
+            --wax-red: #7D1D24;
+            --wax-shadow: rgba(125, 29, 36, 0.5);
+            --lavender: #9E97D4;
+            --font-cursive: 'Alex Brush', cursive;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Lora', Georgia, serif;
+            --font-label: 'Inter', system-ui, sans-serif;
+            --max-width: 680px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
+            line-height: 1.9;
+            overflow-x: hidden;
+            transition: background-color 2.2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        body.warmed {
+            background-color: var(--bg-warm);
+        }
+
+        /* ─── STARDUST CANVAS ─── */
+        #stardust-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.6;
+        }
+
+        /* ─── AMBIENT LIGHT ─── */
+        .ambient-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background: radial-gradient(circle at 50% 35%,
+                    rgba(212, 175, 55, 0.06) 0%,
+                    transparent 65%);
+            transition: background 2s ease, opacity 2s ease;
+        }
+
+        .ambient-glow.bright {
+            background: radial-gradient(circle at 50% 45%,
+                    rgba(229, 193, 88, 0.14) 0%,
+                    rgba(158, 151, 212, 0.05) 50%,
+                    transparent 80%);
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.8rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ─── SHIMMERING WORDS ─── */
+        .shimmer {
+            background: linear-gradient(120deg, #E5C158 0%, #FFF4DC 35%, #C29B38 70%, #E5C158 100%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: goldFoil 6s linear infinite;
+            font-weight: 500;
+            display: inline;
+        }
+
+        @keyframes goldFoil {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 200% 50%;
+            }
+        }
+
+        /* ─── SECTION 1: OPENING ─── */
+        #opening {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 1.5rem;
+            position: relative;
+        }
+
+        .opening-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .vintage-seal-top {
+            width: 42px;
+            height: 42px;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeIn 1.2s ease forwards 0.4s;
+        }
+
+        .opening-label {
+            font-family: var(--font-label);
+            font-weight: 300;
+            font-size: clamp(0.7rem, 1.6vw, 0.8rem);
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            opacity: 0;
+            animation: fadeIn 1.2s ease forwards 0.8s;
+            margin-bottom: 1.4rem;
+        }
+
+        .opening-name {
+            font-family: var(--font-display);
+            font-weight: 300;
+            font-style: italic;
+            font-size: clamp(4.8rem, 15vw, 8.5rem);
+            color: var(--text);
+            line-height: 1;
+            letter-spacing: -0.01em;
+            opacity: 0;
+            animation: fadeIn 1.6s ease forwards 1.4s;
+            text-shadow: 0 0 60px rgba(229, 193, 88, 0.25);
+        }
+
+        .opening-subtitle {
+            font-family: var(--font-cursive);
+            font-size: clamp(1.8rem, 5vw, 2.6rem);
+            color: var(--gold);
+            margin-top: 0.5rem;
+            opacity: 0;
+            animation: fadeIn 1.5s ease forwards 2.2s;
+        }
+
+        .opening-line {
+            margin-top: 2.5rem;
+            font-family: var(--font-body);
+            font-style: italic;
+            font-size: clamp(1rem, 2.6vw, 1.18rem);
+            color: var(--text-muted);
+            opacity: 0;
+            animation: fadeIn 1.4s ease forwards 3.2s;
+            letter-spacing: 0.02em;
+        }
+
+        .scroll-hint {
+            margin-top: 4.5rem;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 4.5s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.6rem;
+            cursor: pointer;
+        }
+
+        .scroll-hint span {
+            font-family: var(--font-label);
+            font-size: 0.65rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.6;
+        }
+
+        .chevron {
+            width: 14px;
+            height: 14px;
+            border-right: 1.5px solid var(--gold);
+            border-bottom: 1.5px solid var(--gold);
+            transform: rotate(45deg);
+            opacity: 0.5;
+            animation: chevronPulse 2.2s ease-in-out infinite;
+        }
+
+        @keyframes chevronPulse {
+
+            0%,
+            100% {
+                transform: rotate(45deg) translateY(0);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: rotate(45deg) translateY(6px);
+                opacity: 0.9;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ─── REVEAL EFFECT ─── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-d1 {
+            transition-delay: 0.15s;
+        }
+
+        .reveal-d2 {
+            transition-delay: 0.3s;
+        }
+
+        .reveal-d3 {
+            transition-delay: 0.45s;
+        }
+
+        /* ─── SECTION 2: VINTAGE PARCHMENT LETTER ─── */
+        #letter {
+            padding: 6rem 0;
+        }
+
+        .section-eyebrow {
+            font-family: var(--font-label);
+            font-weight: 300;
+            font-size: 0.7rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 3rem;
+            opacity: 0.8;
+        }
+
+        .vintage-letter-wrapper {
+            position: relative;
+        }
+
+        .vintage-letter {
+            background: linear-gradient(170deg, #1C1726 0%, #15111E 100%);
+            border: 1px solid var(--paper-border);
+            border-radius: 6px;
+            padding: clamp(2.2rem, 7vw, 4rem);
+            position: relative;
+            box-shadow:
+                0 15px 50px rgba(0, 0, 0, 0.6),
+                0 0 80px rgba(229, 193, 88, 0.08),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+                inset 0 0 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .vintage-letter::before {
+            content: '';
+            position: absolute;
+            inset: 10px;
+            border: 1px dashed rgba(212, 175, 55, 0.2);
+            border-radius: 4px;
+            pointer-events: none;
+        }
+
+        /* Wax Seal */
+        .wax-seal-container {
+            display: flex;
+            justify-content: center;
+            margin-top: -65px;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 3;
+        }
+
+        .wax-seal {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 35%, #9E2630 0%, #681218 60%, #420A0E 100%);
+            border: 2px solid #B83B46;
+            box-shadow:
+                0 8px 25px var(--wax-shadow),
+                inset 0 2px 4px rgba(255, 255, 255, 0.3),
+                inset 0 -3px 6px rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .wax-seal span {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #E8B4B8;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8), 0 -1px 1px rgba(255, 255, 255, 0.3);
+        }
+
+        .wax-ribbon {
+            position: absolute;
+            top: 50px;
+            width: 14px;
+            height: 24px;
+            background: #7D1D24;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .wax-ribbon.left {
+            left: 16px;
+            transform: rotate(-12deg);
+        }
+
+        .wax-ribbon.right {
+            right: 16px;
+            transform: rotate(12deg);
+        }
+
+        /* Postmark Stamp */
+        .postmark {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            border: 1.5px solid rgba(212, 175, 55, 0.25);
+            border-radius: 50%;
+            width: 68px;
+            height: 68px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(12deg);
+            pointer-events: none;
+            opacity: 0.55;
+        }
+
+        .postmark-text {
+            font-family: var(--font-label);
+            font-size: 0.52rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            line-height: 1.1;
+            text-align: center;
+        }
+
+        .letter-date {
+            font-family: var(--font-label);
+            font-size: 0.72rem;
+            color: var(--gold);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 1.6rem;
+            opacity: 0.7;
+        }
+
+        .letter-salutation {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            color: var(--gold);
+            margin-bottom: 1.8rem;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        .letter-salutation.visible {
+            opacity: 1;
+        }
+
+        #typewriter-output {
+            font-family: var(--font-body);
+            font-size: clamp(1rem, 2.7vw, 1.12rem);
+            color: var(--text);
+            line-height: 2.15;
+            white-space: pre-wrap;
+            min-height: 8em;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 1.5px;
+            height: 1.15em;
+            background: var(--gold);
+            margin-left: 2px;
+            vertical-align: middle;
+            animation: blinkCursor 0.85s step-end infinite;
+        }
+
+        .cursor.hidden {
+            opacity: 0;
+            animation: none;
+        }
+
+        @keyframes blinkCursor {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* ─── SECTION 3: ACCOUNTABILITY ─── */
+        #accountability {
+            padding: 7rem 0;
+        }
+
+        .accountability-heading {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: clamp(1.9rem, 5.2vw, 2.7rem);
+            color: var(--lavender);
+            margin-bottom: 2.8rem;
+            line-height: 1.3;
+            font-weight: 300;
+        }
+
+        .accountability-block {
+            font-size: clamp(1rem, 2.6vw, 1.12rem);
+            color: var(--text);
+            line-height: 2.1;
+            margin-bottom: 1.8rem;
+        }
+
+        .accountability-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .accountability-block strong {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        /* ─── SECTION 4: WHAT YOU MEAN TO ME ─── */
+        #meaning {
+            padding: 7rem 0;
+        }
+
+        .ornament-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3.5rem;
+            color: var(--gold);
+            opacity: 0.6;
+        }
+
+        .ornament-line {
+            flex: 1;
+            max-width: 120px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .meaning-pullquote {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: clamp(1.6rem, 4.8vw, 2.35rem);
+            color: var(--text);
+            text-align: center;
+            line-height: 1.5;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+            padding: 0 0.5rem;
+        }
+
+        .meaning-body {
+            font-size: clamp(1rem, 2.6vw, 1.12rem);
+            color: var(--text-muted);
+            line-height: 2.1;
+            margin-bottom: 1.6rem;
+            text-align: center;
+        }
+
+        /* ─── SECTION 5: CANDLE CLOSING ─── */
+        #closing {
+            padding: 7rem 0 11rem;
+            text-align: center;
+        }
+
+        .closing-pretext {
+            font-family: var(--font-body);
+            font-style: italic;
+            font-size: clamp(1.05rem, 3vw, 1.2rem);
+            color: var(--text-muted);
+            margin-bottom: 4rem;
+            line-height: 1.9;
+        }
+
+        .candle-wrap {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            transition: transform 0.5s ease;
+        }
+
+        .candle-wrap:hover .candle-flame-group {
+            filter: drop-shadow(0 0 16px rgba(255, 230, 160, 0.7));
+        }
+
+        .candle-flame-group {
+            transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
+                filter 0.8s ease;
+            transform-origin: bottom center;
+        }
+
+        .candle-wrap.lit .candle-flame-group {
+            transform: scale(1.45);
+            filter: drop-shadow(0 0 25px rgba(255, 230, 160, 0.85)) drop-shadow(0 0 60px rgba(229, 193, 88, 0.5));
+        }
+
+        .flame-body {
+            animation: flameFlicker 2.4s ease-in-out infinite alternate;
+            transform-origin: 50% 90%;
+        }
+
+        .flame-inner {
+            animation: flameFlicker 1.8s ease-in-out infinite alternate-reverse;
+            transform-origin: 50% 90%;
+        }
+
+        @keyframes flameFlicker {
+            0% {
+                transform: scaleX(1) skewX(0deg);
+            }
+
+            30% {
+                transform: scaleX(0.9) skewX(-4deg);
+            }
+
+            60% {
+                transform: scaleX(1.06) skewX(3deg);
+            }
+
+            100% {
+                transform: scaleX(0.95) skewX(-2deg);
+            }
+        }
+
+        .candle-prompt {
+            margin-top: 1.8rem;
+            font-family: var(--font-label);
+            font-size: 0.75rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.75;
+            transition: opacity 0.8s ease;
+        }
+
+        .candle-wrap.lit .candle-prompt {
+            opacity: 0;
+        }
+
+        .closing-line-wrap {
+            margin-top: 3.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.5s ease 0.4s, transform 1.5s ease 0.4s;
+            pointer-events: none;
+        }
+
+        .closing-line-wrap.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .closing-line {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: clamp(1.4rem, 4.4vw, 1.95rem);
+            color: var(--gold);
+            line-height: 1.7;
+            font-weight: 300;
+            max-width: 540px;
+            margin: 0 auto;
+            text-shadow: 0 0 30px rgba(229, 193, 88, 0.3);
+        }
+
+        .closing-sign {
+            margin-top: 2.2rem;
+            font-family: var(--font-cursive);
+            font-size: 2.2rem;
+            color: var(--text);
+            opacity: 0.9;
+        }
+
+        .room-glow {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60vh;
+            background: radial-gradient(ellipse 80% 100% at 50% 100%,
+                    rgba(229, 193, 88, 0.1) 0%,
+                    transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0;
+            transition: opacity 2.5s ease;
+        }
+
+        .room-glow.visible {
+            opacity: 1;
+        }
+
+        footer {
+            height: 4rem;
+        }
+
+        @media (max-width: 480px) {
+            .vintage-letter {
+                padding: 2.5rem 1.4rem;
+                border-radius: 4px;
+            }
+
+            .postmark {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background stardust & ambient lighting -->
+    <canvas id="stardust-canvas"></canvas>
+    <div class="ambient-glow" id="ambient-glow"></div>
+    <div class="room-glow" id="room-glow"></div>
+
+    <!-- ──────── SECTION 1: OPENING ──────── -->
+    <section id="opening">
+        <div class="opening-inner">
+            <svg class="vintage-seal-top" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
+                stroke-linecap="round" stroke-linejoin="round" style="color: var(--gold);">
+                <path
+                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+            </svg>
+            <p class="opening-label">for chhoti bauaa</p>
+            <h1 class="opening-name">Megha.</h1>
+            <p class="opening-subtitle">meri pyaari princess</p>
+            <p class="opening-line">There's something I need to say.</p>
+
+            <div class="scroll-hint" onclick="document.getElementById('letter').scrollIntoView({behavior: 'smooth'})">
+                <span>read on</span>
+                <div class="chevron"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ──────── SECTION 2: VINTAGE PARCHMENT LETTER ──────── -->
+    <section id="letter">
+        <div class="container">
+            <p class="section-eyebrow reveal">A letter from Bhaiya</p>
+
+            <div class="vintage-letter-wrapper reveal reveal-d1">
+                <div class="wax-seal-container">
+                    <div class="wax-ribbon left"></div>
+                    <div class="wax-seal">
+                        <span>M</span>
+                    </div>
+                    <div class="wax-ribbon right"></div>
+                </div>
+
+                <div class="vintage-letter">
+                    <div class="postmark">
+                        <span class="postmark-text">BHAIYA<br />AUG 2026<br />SPECIAL</span>
+                    </div>
+
+                    <p class="letter-date">August 2026</p>
+                    <p class="letter-salutation" id="letter-salutation">Meri Chhoti Bauaa,</p>
+
+                    <div id="typewriter-output" aria-live="polite"></div>
+                    <span class="cursor" id="cursor" aria-hidden="true"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ──────── SECTION 3: ACCOUNTABILITY ──────── -->
+    <section id="accountability">
+        <div class="container">
+            <h2 class="accountability-heading reveal">
+                I know the mistakes i have done.
+            </h2>
+
+            <p class="accountability-block reveal reveal-d1">
+                Galti se hua, but <strong>ye galti se bhi nahi hona chahiye tha</strong>. Dobara wali cheez literally
+                mere mind me aayi hi nahi bilkul. Par yaar is baar ho gayi, aur ab mujhe poora realize hai ki meri wo
+                mistake kitni badi thi.
+            </p>
+
+            <p class="accountability-block reveal reveal-d2">
+                Aur is baar please <span class="shimmer">maaf kar do</span>, aur bas ek baar aur apne is bewakoof bhaiya
+                ko mauka do.
+            </p>
+        </div>
+    </section>
+
+    <!-- ──────── SECTION 4: WHAT YOU MEAN TO ME ──────── -->
+    <section id="meaning">
+        <div class="container">
+            <div class="ornament-divider reveal">
+                <div class="ornament-line"></div>
+                <span>✦</span>
+                <div class="ornament-line"></div>
+            </div>
+
+            <p class="meaning-pullquote reveal reveal-d1">
+                "Yaar behna, tum toh meri chhoti behna ho na yaar... aise door na ho."
+            </p>
+
+            <p class="meaning-body reveal reveal-d2">
+                Bhaiya ke paas raho. I know bhaiya se bahut badi galti hui hai, but yaar use sudharo, sikhao, daanto,
+                maaro... par aise jao nahi yaar behna. Please yaar behna, <span class="shimmer">meri chhoti
+                    behnaa</span>.
+            </p>
+
+            <p class="meaning-body reveal reveal-d3">
+                Hum abse poora koshish karenge tumhare hi according chalne ka. Jaise bologi waise karenge aur waisa hi
+                hoga hmesha. Tum sudharo na yaar bhaiya ko, but aise door mat ho bilkull bhi.
+            </p>
+        </div>
+    </section>
+
+    <!-- ──────── SECTION 5: CANDLE CLOSING ──────── -->
+    <section id="closing">
+        <div class="container">
+            <p class="closing-pretext reveal">
+                I'm not asking you to forget everything right away.<br />
+                but yaar bs dur na ho.
+            </p>
+
+            <!-- CANDLE -->
+            <div class="candle-wrap reveal reveal-d1" id="candle" role="button" tabindex="0"
+                aria-label="Light the candle to read the final message" onclick="lightCandle()"
+                onkeypress="if(event.key==='Enter') lightCandle()">
+                <svg width="64" height="115" viewBox="0 0 60 110" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <g class="candle-flame-group">
+                        <ellipse class="flame-body" cx="30" cy="24" rx="9.5" ry="15" fill="url(#flameGrad)"
+                            opacity="0.9" />
+                        <ellipse class="flame-inner" cx="30" cy="27" rx="5.5" ry="9.5" fill="url(#flameInnerGrad)"
+                            opacity="0.95" />
+                        <ellipse cx="30" cy="14" rx="3" ry="5.5" fill="#FFF4DC" opacity="0.8" />
+                    </g>
+
+                    <g class="candle-body-group">
+                        <line x1="30" y1="38" x2="30" y2="46" stroke="#444" stroke-width="1.6" stroke-linecap="round" />
+                        <rect x="14" y="46" width="32" height="56" rx="3.5" fill="url(#candleGrad)" />
+                        <rect x="19" y="50" width="5" height="44" rx="2.5" fill="rgba(255,244,220,0.15)" />
+                        <path d="M 30 46 Q 22 52 21 60 Q 21 64 24 64 Q 26 64 26 62 Q 26 58 28 54 Z"
+                            fill="rgba(229,193,88,0.28)" />
+                    </g>
+
+                    <defs>
+                        <radialGradient id="flameGrad" cx="50%" cy="70%" r="60%">
+                            <stop offset="0%" stop-color="#FFF4DC" />
+                            <stop offset="45%" stop-color="#E5C158" />
+                            <stop offset="100%" stop-color="#C29B38" stop-opacity="0" />
+                        </radialGradient>
+                        <radialGradient id="flameInnerGrad" cx="50%" cy="70%" r="60%">
+                            <stop offset="0%" stop-color="#FFFFFF" />
+                            <stop offset="60%" stop-color="#FFF4DC" />
+                            <stop offset="100%" stop-color="#E5C158" stop-opacity="0.4" />
+                        </radialGradient>
+                        <linearGradient id="candleGrad" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#261E2E" />
+                            <stop offset="35%" stop-color="#382C45" />
+                            <stop offset="60%" stop-color="#2F253B" />
+                            <stop offset="100%" stop-color="#1B1422" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+                <p class="candle-prompt" id="candle-prompt">
+                    Tap the candle &nbsp;✦
+                </p>
+            </div>
+
+            <!-- Final Message -->
+            <div class="closing-line-wrap" id="closing-line-wrap">
+                <p class="closing-line">
+                    "Daanto, maaro, gussa karo... par kabhi apne bhaiya se door mat jaana meri princess."
+                </p>
+                <p class="closing-sign">— Your Bhaiya</p>
+            </div>
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script>
+        // ─── BACKGROUND STARDUST CANVAS ───
+        (function initStardust() {
+            const canvas = document.getElementById('stardust-canvas');
+            const ctx = canvas.getContext('2d');
+            let width = (canvas.width = window.innerWidth);
+            let height = (canvas.height = window.innerHeight);
+
+            const stars = [];
+            const COUNT = 45;
+
+            for (let i = 0; i < COUNT; i++) {
+                stars.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    r: Math.random() * 1.6 + 0.5,
+                    alpha: Math.random() * 0.7 + 0.2,
+                    speedY: Math.random() * 0.25 + 0.08,
+                    speedX: (Math.random() - 0.5) * 0.15,
+                    twinkle: Math.random() * 0.02 + 0.005,
+                });
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, width, height);
+                stars.forEach((s) => {
+                    s.y -= s.speedY;
+                    s.x += s.speedX;
+                    s.alpha += Math.sin(Date.now() * s.twinkle) * 0.01;
+
+                    if (s.y < -10) {
+                        s.y = height + 10;
+                        s.x = Math.random() * width;
+                    }
+
+                    ctx.beginPath();
+                    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(229, 193, 88, ${Math.max(0.1, Math.min(0.85, s.alpha))})`;
+                    ctx.shadowBlur = 8;
+                    ctx.shadowColor = '#E5C158';
+                    ctx.fill();
+                });
+                requestAnimationFrame(draw);
+            }
+
+            window.addEventListener('resize', () => {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            });
+
+            draw();
+        })();
+
+        // ─── TYPEWRITER TEXT ───
+        const APOLOGY_TEXT =
+            `I am so sorry my princess. I am so sorry to hurt you like this.
+
+I know this thing doesn't matter at all at this time whether I did it intentionally or not, but the main thing is the mistake that I have committed.
+
+But yaar bauaaa, is baar ye cheez sahi me realize hai. Humko laga tha ki is baar ye tumse related nahi hai toh utna dikkat nahi hai, aur phir hum jis reason se bole wo reason hum bahut accha sochkar bole tumko...
+
+Par yaar ab humko acche se realize hai ki meri wo mistake itni badi thi ki is cheez par tumko nahi keh sakte ki galti se hua. Galti se hua, but ye galti se bhi nahi hona chahiye tha. Dobara wali cheez literally mere mind me aayi hi nahi bilkul.
+
+Par yaar is baar ho gayi, aur is baar maaf kar do... aur bas ek baar aur mauka do.`;
+
+        let typewriterStarted = false;
+        const outputEl = document.getElementById('typewriter-output');
+        const cursorEl = document.getElementById('cursor');
+        const salutationEl = document.getElementById('letter-salutation');
+
+        function startTypewriter() {
+            if (typewriterStarted) return;
+            typewriterStarted = true;
+
+            salutationEl.classList.add('visible');
+
+            let i = 0;
+            const CHAR_DELAY = 36;
+
+            function typeNext() {
+                if (i < APOLOGY_TEXT.length) {
+                    const char = APOLOGY_TEXT[i];
+                    if (char === '\n') {
+                        outputEl.innerHTML += '<br/>';
+                    } else {
+                        outputEl.innerHTML += char;
+                    }
+                    i++;
+                    const isPause = ['.', ',', '?', '!', '—'].includes(char);
+                    setTimeout(typeNext, isPause ? CHAR_DELAY * 4 : CHAR_DELAY);
+                } else {
+                    cursorEl.classList.add('hidden');
+                }
+            }
+
+            setTimeout(typeNext, 600);
+        }
+
+        // ─── SCROLL OBSERVER ───
+        const revealEls = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.15 }
+        );
+
+        revealEls.forEach((el) => revealObserver.observe(el));
+
+        // ─── TYPEWRITER OBSERVER ───
+        const letterSection = document.getElementById('letter');
+        const letterObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        startTypewriter();
+                        letterObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.25 }
+        );
+
+        letterObserver.observe(letterSection);
+
+        // ─── CANDLE INTERACTION ───
+        let candleLit = false;
+        function lightCandle() {
+            if (candleLit) return;
+            candleLit = true;
+
+            const candle = document.getElementById('candle');
+            const closingWrap = document.getElementById('closing-line-wrap');
+            const ambientGlow = document.getElementById('ambient-glow');
+            const roomGlow = document.getElementById('room-glow');
+
+            candle.classList.add('lit');
+
+            setTimeout(() => {
+                document.body.classList.add('warmed');
+                ambientGlow.classList.add('bright');
+                roomGlow.classList.add('visible');
+            }, 300);
+
+            setTimeout(() => {
+                closingWrap.classList.add('visible');
+            }, 800);
+        }
+    </script>
+</body>
+
+</html>
